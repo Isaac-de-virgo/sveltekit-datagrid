@@ -7,4 +7,5 @@ export interface Column<T = any> {
     selectable?: boolean;
     template?: any;
     format?: (value: any, row: T) => string;
+    quickFilters?: string[]; // Nueva propiedad para filtros rápidos
 }

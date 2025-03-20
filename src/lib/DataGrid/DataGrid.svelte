@@ -3,28 +3,10 @@
     import { exportToDocx } from "$lib/types/WordExport.js";
     import { exportToPdf } from "$lib/types/PdfExport.js";
     import { exportToRtf } from "$lib/types/RtfExport.js";
+    import type { Column } from "$lib/types/Column.js";
+    import type { ExportOption } from "$lib/types/ExportOpcion.js";
     import type { Snippet } from "svelte";
     import { onMount } from "svelte";
-
-    // Type definitions
-    export interface Column<T = any> {
-        field?: keyof T;
-        header?: string;
-        width?: string;
-        sortable?: boolean;
-        filterable?: boolean;
-        selectable?: boolean;
-        template?: any;
-        format?: (value: any, row: T) => string;
-        quickFilters?: string[]; // Nueva propiedad para filtros rápidos
-    }
-
-    export interface ExportOption {
-        label: string;
-        format: "pdf" | "xls" | "xlsx" | "docx" | "rtf" | "csv";
-        enabled: boolean;
-        icon?: string;
-    }
 
     // Props with types
     type Props = {
