@@ -25,7 +25,30 @@ A powerful and customizable DataGrid component for SvelteKit applications. Built
 ```bash
 npm install sveltekit-datagrid docx jspdf jspdf-autotable xlsx 
 ```
+```bash
+npm install tailwindcss @tailwindcss/vite
+```
+```typescript
+import { sveltekit } from '@sveltejs/kit/vite';
+import { defineConfig } from 'vite';
+import tailwindcss from '@tailwindcss/vite';
+export default defineConfig({
+  plugins: [
+    tailwindcss(),
+    sveltekit(),
+  ],
+});
+```
+app.css
+@import "tailwindcss";
 
+```svelte
+<script>
+  let { children } = $props();
+  import "../app.css";
+</script>
+{@render children()}
+```
 ---
 
 ## 🛠️ Quick Start
@@ -34,7 +57,7 @@ npm install sveltekit-datagrid docx jspdf jspdf-autotable xlsx
 
 ```svelte
 <script lang="ts">
-  import { DataGrid } from "sveltekit-mk-datagrid";
+  import { DataGrid } from "sveltekit-datagrid";
 </script>
 ```
 
