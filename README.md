@@ -23,7 +23,7 @@ A powerful and customizable DataGrid component for SvelteKit applications. Built
 ## 📦 Installation
 
 ```bash
-npm install sveltekit-mk-datagrid docx jspdf jspdf-autotable xlsx 
+npm install sveltekit-datagrid docx jspdf jspdf-autotable xlsx 
 ```
 
 ---
@@ -212,13 +212,4 @@ Made with ❤️ by Isaac R.
 Need help? Open an issue or contact me at [joirgdev@gmail.com]
 ``` 
 
-This README includes:
-- Clear sections with emojis for visual appeal
-- Simple step-by-step tutorial for beginners
-- Code examples with syntax highlighting
-- Feature explanations in tables
-- Installation instructions
-- Contribution guidelines
-- License information
-
-It's designed to be easy to read while providing comprehensive documentation for developers of all levels.
+This adds the necessary Tailwind CSS setup instructions that are required for the DataGrid component to work properly.
